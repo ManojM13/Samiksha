@@ -1,4 +1,4 @@
-# Django-Poll-App
+# Samiksha
 The Samiksha is a web application which avoids more manual hours that need to spend in record keeping and calculating votes. Through this the users and the candidates are registered online. Their information is stored in the database the admin can easily access the details of the voters and the candidates. The voters are allowed to vote online they can even vote by sitting at home. Every User allowed to vote
 only once so there is no chance of duplicated votes. This application keeps the data in a centralized way which is available to all the users simultaneously. It is very easy to manage statics data in database.
 They can easily use the tool that decreases manual hours spending for normal things and hence increases the performance.
