@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block custom_css %}
+<link rel="stylesheet" href="{% static 'css/home_style.css' %}">
+{% endblock custom_css %}
+<style>
+    .container{
+        background-color: rgba(0,0,0,.5);
+    color: #fff;
+   margin-top: 80px;
+   width: 30%;
+     border-radius: 1.5em;
+     box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+     height: 350px;
+    }
+    .h3{
+         font-size: 30px;
+
+    }
+    
+ .html{
+     background-image: url('https://e1.pxfuel.com/desktop-wallpaper/496/873 desktop-wallpaper-7-minimalist-marvel-iron-man-minimalist.jpg');
+    background-size: cover;
+ }   
+ .img{
+    align: middle;
+ } 
+.thead{
+  padding: 15px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+.td {
+  padding: 15px;
+  text-align: left;
+}
+.tr{
+    padding: 20px;
+}
+
+</style>
+
+{% block content %}
+
+<div class="container">
+    <table style="width:100%">
+        <thead>
+            <th>Poll ID</th>
+            <th>Choice ID</th>
+            <th>Number of Votes</th>
+        </thead>
+        <tbody>
+
+               {% for i in data%}
+            <tr style="margin: 20px;">
+                <td>
+                    {{i.poll_id}}
+                </td>
+                <td>
+                    {{i.choice_id}}
+                </td>
+                <td>
+                    {{i.Number_of_votes}}
+                </td>
+            </tr>
+               {%endfor%}
+        </tbody>
+    </table>
+ 
+
+ 
+                
+    
+</div>
+{% endblock content %}

@@ -1,0 +1,36 @@
+html, body {
+    height:100%;
+    padding: 0;
+    margin: 0;
+    color: white;
+  }
+.html{
+    background-image: url('https://e1.pxfuel.com/desktop-wallpaper/496/873/desktop-wallpaper-7-minimalist-marvel-iron-man-minimalist.jpg');
+    background-size: cover;
+   
+}
+
+.body {
+    background: rgba(0, 0, 0, 0.466);
+    
+
+}
+#home-content{
+    text-align: center;
+    padding-top: 20%;
+}
+.h1{
+
+        color: antiquewhite;
+         font-size: 15 px;
+         text-align: center;
+    }
+.container{
+         padding-top: 40px;
+      background-color: rgba(0,0,0,.5);
+    color: #fff;
+     margin: auto;
+     border-radius: 1.5em;
+     box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+
+    }

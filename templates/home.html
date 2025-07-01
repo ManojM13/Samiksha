@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block custom_css %}
+<link rel="stylesheet" href="{% static 'css/home_style.css' %}">
+{% endblock custom_css %}
+<style type="text/css">
+    .container{
+        background-color: rgba(0,0,0,.5);
+    color: #fff;
+   margin-top: 80px;
+   width: 30%;
+     border-radius: 1.5em;
+     box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+     height: 350px;
+    }
+    .h3{
+         font-size: 30px;
+
+    }
+    
+ .html{
+     background-image: url('https://e1.pxfuel.com/desktop-wallpaper/496/873 desktop-wallpaper-7-minimalist-marvel-iron-man-minimalist.jpg');
+    background-size: cover;
+ }   
+ .img{
+    align: middle;
+ } 
+</style>
+
+{% block content %}
+
+<div class="container">
+
+       
+                <h1></h1>
+                <img src="{% static 'img/j.png' %}"width="200" height="200" >
+                <h3>Your Voice Matters!</h3>
+                <hr>
+                <a class="btn btn-light btn-lg" href="{% url 'polls:list' %}" role="button">Get Started !</a>
+    
+</div>
+{% endblock content %}

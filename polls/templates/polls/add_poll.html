@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style type="text/css">
+    .container{
+    background-color: rgba(0,0,0,.5);
+    color: #fff;
+   margin-top: 20px;
+   width: 35%;
+   height: 600px;
+     border-radius: 1.5em;
+     box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+
+    }
+
+   
+</style>
+<h2 style="color:white;" class="text-center mt-3 mb-3">Create New Poll</h2>
+<div class="container">
+    <div class="row center">
+        <div class="col-md-6 offset-md-3">
+            
+            {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            <form action="" method="POST">
+                {% csrf_token %}
+                {% for field in form %}
+                <div class="form-group">
+                    {{ field.errors }}
+                    
+                    {{ field }}
+
+                </div>
+                {% endfor %}
+                <button type="submit" class="btn btn-primary">Add Poll</button>
+                <a class="btn btn-warning" href="{% url 'polls:list' %}" role="button">Back</a>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

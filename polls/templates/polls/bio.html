@@ -1,0 +1,33 @@
+
+
+{% extends 'base.html' %}
+{% load static %}
+{% block custom_css %}
+<link rel="stylesheet" href="{% static 'css/home_style.css' %}">
+{% endblock custom_css %}
+<style type="text/css">
+    .h3{
+         font-size: 30px;
+
+    }
+    
+ .html{
+     background-image: url('https://e1.pxfuel.com/desktop-wallpaper/496/873 desktop-wallpaper-7-minimalist-marvel-iron-man-minimalist.jpg');
+    background-size: cover;
+ }    
+</style>
+
+{% block content %}
+<h1 style="text-align: center;">Profile ID: {{user.id}}</h1>
+<div class="container">
+   
+
+    <h2>User Name: {{user.username}}</h2>
+    <h2>Email: {{user.email}}</h2>
+    <h2>Last Login: {{user.last_login}}</h2>
+    <h2>Status: {{user.is_active}}</h2>
+    
+
+
+</div>
+{% endblock content %}
